@@ -115,7 +115,7 @@ use_python("~/.envs/science/bin/python")
       \rho = \dfrac{m}{V} \Rightarrow \rho = \dfrac{m}{l^3}  &\Rightarrow d \rho = \dfrac{dm \cdot l^3 - m \cdot (3l^2 dl)}{(l^3)^6} \Rightarrow \dfrac{d \rho}{\rho} = \dfrac{\dfrac{dm \cdot l^3 - m \cdot (3l^2 dl)}{(l^3)^6}}{\dfrac{m}{l^3}}\\
       &\Rightarrow \dfrac{d \rho}{\rho} = \dfrac{dm}{m} - 3\dfrac{dl}{l}\\
       &\Rightarrow \left(\dfrac{\Delta \rho}{\rho}\right)_{max} = max \left(\pm \dfrac{\Delta m}{m} \mp 3 \dfrac{\Delta l}{l}\right)\\
-      &\Rightarrow \left(\dfrac{\Delta \rho}{\rho}\right)_{max} = \pm \left(\dfrac{\Delta m}{m} + 3\dfrac{\Delta l}{l}\right) = \pm \left(4\% + 3 \cdot 3\%\right) = \pm 13\%
+      &\Rightarrow \left(\dfrac{\Delta \rho}{\rho}\right)_{max} = \dfrac{\Delta m}{m} + 3\dfrac{\Delta l}{l} = 4\% + 3 \cdot 3\%= 13\%
     \end{align*}
     Resposta Correta: item D.
   \fimSol
@@ -132,7 +132,7 @@ use_python("~/.envs/science/bin/python")
     K = \dfrac{1}{2}mv^2 &\Rightarrow dK = \dfrac{1}{2} dm v^2 + \dfrac{1}{2} m (2v dv) \Rightarrow \dfrac{d K}{K} = \dfrac{\dfrac{1}{2} dm v^2 + \dfrac{1}{2} m (2v dv)}{\dfrac{1}{2}m v^2}\\
     &\Rightarrow \dfrac{dK}{K} = \dfrac{dm}{m} + 2 \dfrac{dv}{v}\\
     &\Rightarrow \left(\dfrac{\Delta K}{K}\right)_{max} = max \left(\pm \dfrac{\Delta m}{m} \pm 2 \dfrac{\Delta v}{v}\right)\\
-    &\Rightarrow \left(\dfrac{\Delta K}{K}\right)_{max} = \pm \left(\dfrac{\Delta m}{m} + \dfrac{\Delta v}{v}\right) = \pm \left(2\% + 2 \cdot 3\%\right) = \pm 8\%
+    &\Rightarrow \left(\dfrac{\Delta K}{K}\right)_{max} = \dfrac{\Delta m}{m} + \dfrac{\Delta v}{v} = 2\% + 2 \cdot 3\% = 8\%
   \end{align*}
   Resposta correta: item C.
   \fimSol
@@ -149,11 +149,65 @@ use_python("~/.envs/science/bin/python")
       p = \dfrac{F}{A} \Rightarrow p = \dfrac{F}{L^2} & \Rightarrow dp = \dfrac{dF L ^2 - F (2L dL)}{L^2} \Rightarrow \dfrac{dp}{p} = \dfrac{\dfrac{dF L ^2 - F (2L dL)}{L^2}}{\dfrac{F}{L^2}}\\
       &\Rightarrow \dfrac{dp}{p} = \dfrac{dF}{F} - 2\dfrac{dL}{L}\\
       &\Rightarrow \left(\dfrac{\Delta p}{p}\right)_{max} =  max \left(\pm \dfrac{\Delta F}{F} \mp 2 \dfrac{\Delta L}{L}\right)\\
-       &\Rightarrow \left(\dfrac{\Delta p}{p}\right)_{max} = \pm \left(\dfrac{\Delta F}{F} + 2 \dfrac{\Delta L}{L}\right) = \pm (4\% + 2 \cdot 2\%) = \pm 8\%
+       &\Rightarrow \left(\dfrac{\Delta p}{p}\right)_{max} = \dfrac{\Delta F}{F} + 2 \dfrac{\Delta L}{L} = 4\% + 2 \cdot 2\% = 8\%
     \end{align*}
     Resposta Correta: item A.
   \fimSol
   %%%%
+  \item O calor gerado em um circuito depende da resistência, da corrente e do tempo durante o qual a corrente flui. Se o erro na medição desses valores é de 1\%, 2\% e 1\%, respectivamente, então o erro máximo na medição do calor é:
+  \begin{enumerate}
+    \item 8\%
+    \item 6\%
+    \item 18\%
+    \item 12\%
+  \end{enumerate}
+  \iniSol
+    A potência dissipada em um circuito com resistência $R$, no qual circula uma correten $i$ é dada por $P = Ri^2$. Assim, o calor $H$ gerado num tempo $t$ é:
+    $$H = Ri^2 t$$
+    Portanto, diferenciando a equação acima, obtemos
+    \begin{align*}
+      dH = d(Ri^2) t + Ri^2 dt = dR i^2 t + R (2i di) t + Ri^2 dt & \Rightarrow \dfrac{dH}{H} = \dfrac{dR i^2 t + R (2i di) t + Ri^2 dt}{Ri^2 t} \\
+      &\Rightarrow \dfrac{dH}{H} = \dfrac{dR}{R} + 2\dfrac{di}{i} + \dfrac{dt}{t}\\
+      &\Rightarrow \left(\dfrac{\Delta H}{H}\right)_{max} = max\left(\pm \dfrac{\Delta R}{R} \pm 2 \dfrac{\Delta i}{i} \pm \dfrac{\Delta t}{t}\right)\\
+      &\Rightarrow \left(\dfrac{\Delta H}{H}\right)_{max} = \dfrac{\Delta R}{R} +2\dfrac{\Delta i}{i} + \dfrac{\Delta t}{t}\\
+      &\Rightarrow \left(\dfrac{\Delta H}{H}\right)_{max} = 1\% + 2 \cdot 2\% + 1\% = 6\%
+    \end{align*}
+    Resposta Correta: item B.
+  \fimSol
+  %%%%
+  \item Seja \( g \) a aceleração devido à gravidade na superfície da Terra e \( K \) a energia cinética rotacional da Terra. Suponha que o raio da Terra diminua em 2\%. Mantendo todas as outras quantidades constantes, então:
+  \begin{enumerate}
+    \item $g$ aumenta 2\% e $K$ aumenta 2\%.
+    \item $g$ aumenta 4\% e $K$ decresce 4\%.
+    \item $g$ decresce 4\% e $K$ decresce 2\%.
+    \item $g$ decresce 2\% e $K$ decresce 4\%.
+  \end{enumerate}
+  \iniSol
+  Seja $R$ o raio da Terra. A aceleração da gravidade $g$ na superfície terrestre é dada por:
+  $$
+    g = \dfrac{G M}{R^2}
+  $$
+  em que $G = 6,67 \times 10^{-11} \text{ m}^3\text{kg}^{-1}\text{s}^{-2}$ é a constante de gravitação universal e $M$ é a massa da Terra. Considerando uma redução percentual $\dfrac{\Delta R}{R} = 2\%$ no raio terrestre e mantendo as demais quantidades constantes, temos:
+  \begin{align*}
+    g = GM R^{-2} &\Rightarrow dg = GM (-2R^{-3} dR) \Rightarrow \dfrac{dg}{g} = \dfrac{-2GMR^{-3}dR}{GMR^{-2}}\\
+    &\Rightarrow \dfrac{dg}{g} = - 2\dfrac{dR}{R} \Rightarrow \dfrac{\Delta g}{g} = - 2\dfrac{\Delta R}{R} = - 2 \cdot (-2\%) = +4\%
+  \end{align*}
+  A energia cinética de rotação da Terra é $$K = \dfrac{1}{2}I\omega^2$$
+  em que $I = \dfrac{2}{5}MR^2$ é o momento de inércia da Terra, considerada esférica e $\omega$ é a velocidade angular de rotação. Assim:
+  $$
+  K = \dfrac{1}{5}MR^2\omega^2
+  $$
+  Diferenciando a equação acima e considerando apenas a variação do raio $R$, temos:
+  \begin{align*}
+  dK = \dfrac{1}{5}M\omega^2 (2RdR) & \Rightarrow \dfrac{dK}{K} = \dfrac{\dfrac{1}{5}M\omega^2 (2RdR)}{\dfrac{1}{5}MR^2\omega^2}\\
+  &\Rightarrow \dfrac{dK}{K} = 2\dfrac{dR}{R}\\
+  &\Rightarrow \dfrac{\Delta K}{K} = 2 \dfrac{\Delta R}{R} = 2 \cdot (-2\%) = -4\%
+  \end{align*}
+  Portanto, uma diminuição de 2\% no raio da Terra provoca um aumento de 4\% na aceleração da gravidade $g$ e uma diminuição de 4\% na energia cinética de rotação.
+  
+  \fimSol
+  %%%%
+  \item
 \end{enumerate}
 
 
