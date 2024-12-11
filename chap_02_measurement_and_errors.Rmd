@@ -24,6 +24,51 @@ library(reticulate)
 use_python("~/.envs/science/bin/python")
 ```
 
+
+\section*{Exercícios}
+
+\subsection*{Questões Objetivas}
+
+\begin{enumerate}
+  \item O número de algarismos significativos em 3400 é:
+  \begin{enumerate}
+    \item 3
+    \item 1
+    \item 4
+    \item 2
+  \end{enumerate}
+  \iniSol
+    Observemos que $3400 = 3,4 \times 10^3$. Assim, temos dois algarismos significativos, a saber, 3 e 4. Portanto, a resposta correta é o item D.
+  \fimSol
+  
+  \item Os algarismos significativos no número $6,0023$ são:
+  \begin{enumerate}
+    \item 2
+    \item 5
+    \item 4
+    \item 3
+  \end{enumerate}
+  \iniSol
+    Temos cinco algarismos significativos em $6,0023$: $6, 0, 0, 2, \text{ e } 3$. Resposta correta: item B.
+  \fimSol
+  \item O comprimento e a largura de uma folha de metal são $3,124$ m e $3,002$ m, respectivamente. A área desta folha, arredondada para o número correto de algarismos significativos, é:
+  \begin{enumerate}
+    \item $9,378\text{ m}^2$
+    \item $9,37\text{ m}^2$
+    \item $9,4\text{ m}^2$
+    \item Nenhuma das anteriores.
+  \end{enumerate}
+  \iniSol
+    $$
+      \text{Área} = \text{Comprimento} \times \text{Largura} = 3,124 \times 3,002 =  9,378248
+    $$
+    Com a correta quantidade de algarismos significativos, $\text{Área} = 9,378\text{ m}^2$. Resposta: item A.
+  \fimSol
+\end{enumerate}
+
+
+
+
 \begin{enumerate}
   \item \textbf{(FEI-SP)} Dois móveis $A$ e $B$, ambos com movimento uniforme, percorrem uma trajetória retilínea conforme mostra a figura. Em $t = 0$, estes se encontram, respectivamente, nos pontos $A$ e $B$ na trajetória. As velocidades dos móveis são $v_A = 50$ m/s e $v_B = 30$ m/s no mesmo sentido.
   
