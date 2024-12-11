@@ -40,7 +40,7 @@ use_python("~/.envs/science/bin/python")
   \iniSol
     Observemos que $3400 = 3,4 \times 10^3$. Assim, temos dois algarismos significativos, a saber, 3 e 4. Portanto, a resposta correta é o item D.
   \fimSol
-  
+  %%%%
   \item Os algarismos significativos no número $6,0023$ são:
   \begin{enumerate}
     \item 2
@@ -51,6 +51,7 @@ use_python("~/.envs/science/bin/python")
   \iniSol
     Temos cinco algarismos significativos em $6,0023$: $6, 0, 0, 2, \text{ e } 3$. Resposta correta: item B.
   \fimSol
+  %%%%
   \item O comprimento e a largura de uma folha de metal são $3,124$ m e $3,002$ m, respectivamente. A área desta folha, arredondada para o número correto de algarismos significativos, é:
   \begin{enumerate}
     \item $9,378\text{ m}^2$
@@ -64,6 +65,95 @@ use_python("~/.envs/science/bin/python")
     $$
     Com a correta quantidade de algarismos significativos, $\text{Área} = 9,378\text{ m}^2$. Resposta: item A.
   \fimSol
+  %%%%
+  \item O comprimento, a largura e a espessura de um bloco são dadas por $l = 12$ cm, $b = 6$ cm e $t = 2,45$ cm. O volume do bloco, de acordo com o conceito de algarismos significativos, deve ser:
+  \begin{enumerate}
+    \item $1 \times 10^2\text{ cm}^3$
+    \item $2 \times 10^2\text{ cm}^3$
+    \item $1,763 \times 10^2\text{ cm}^3$
+    \item 1Nenhuma das anteriores.
+  \end{enumerate}
+  \iniSol
+    $$
+    V = l \times b \times t = 12 \times 6 \times 2,45 = 176,4 \text{ cm}^3 = 1,764 \times 10^2 \text{ cm}^3
+    $$
+    Note-se que o comprimento ($l$), a largura ($b$) e a espessura ($t$) possuem respectivamente 2, 1 e 3 algarismos significativos. A resposta do volume $V = l \times b \times t$ deve ser arredondada para a menor quantidade de algarismos significativos das quantidades dadas, ou seja, 1 (um) algarismos significativo. Portanto, de acordo com o conceito de algarismos significativos:
+    $$ V = 2 \times 10^2 \text{ cm}^3 $$
+    Reposta correta: item B.
+  \fimSol
+  %%%%
+  \item Se o erro na medição do raio de uma esfera é de 1\%, qual será o erro na medição do volume?
+  \begin{enumerate}
+    \item 1\%
+    \item $\dfrac{1}{3}$\%
+    \item 3\%
+    \item 1Nenhuma das anteriores.
+  \end{enumerate}
+  \iniSol
+  Consideremos a fórmula para o volume $V$ de uma esfera de raio $R$: $$V = \dfrac{4}{3}\pi R^3$$
+  Tomando diferenciais em ambos os lados da equação, temos:
+  \begin{align*}
+    V = \dfrac{4}{3} \pi R^3 &\Rightarrow dV = \dfrac{4}{3}\pi \left(3R^2 dR\right) \Rightarrow dV = \dfrac{4}{3}\pi R^3 \left(3\dfrac{dR}{R}\right) \Rightarrow \dfrac{dV}{V} = 3 \dfrac{dR}{R} \Rightarrow \dfrac{\Delta V}{V} = 3 \dfrac{\Delta R}{R}
+  \end{align*}
+  Dado que $\dfrac{\Delta R}{R} = 1\%$, temos:
+  $$
+  \dfrac{\Delta V}{V} = 3 \dfrac{\Delta R}{R} = 3 \cdot 1\% = 3\%
+  $$
+  Resposta correta: item C.
+  \fimSol
+  %%%%
+  \item A densidade de um cubo é determinada medindo sua massa e o comprimento de seus lados. Se o erro máximo na medição da massa e do comprimento for de 4\% e 3\%, respectivamente, o erro máximo na medição da densidade será:
+  \begin{enumerate}
+    \item 7\%
+    \item 9\%
+    \item 12\%
+    \item 13\%
+  \end{enumerate}
+  \iniSol
+    Seja o volume ($V$) do cubo dado por $V = l^3$, em que $l$ é comprimento de seus lados. Assim,
+    \begin{align*}
+      \rho = \dfrac{m}{V} \Rightarrow \rho = \dfrac{m}{l^3}  &\Rightarrow d \rho = \dfrac{dm \cdot l^3 - m \cdot (3l^2 dl)}{(l^3)^6} \Rightarrow \dfrac{d \rho}{\rho} = \dfrac{\dfrac{dm \cdot l^3 - m \cdot (3l^2 dl)}{(l^3)^6}}{\dfrac{m}{l^3}}\\
+      &\Rightarrow \dfrac{d \rho}{\rho} = \dfrac{dm}{m} - 3\dfrac{dl}{l}\\
+      &\Rightarrow \left(\dfrac{\Delta \rho}{\rho}\right)_{max} = max \left(\pm \dfrac{\Delta m}{m} \mp 3 \dfrac{\Delta l}{l}\right)\\
+      &\Rightarrow \left(\dfrac{\Delta \rho}{\rho}\right)_{max} = \pm \left(\dfrac{\Delta m}{m} + 3\dfrac{\Delta l}{l}\right) = \pm \left(4\% + 3 \cdot 3\%\right) = \pm 13\%
+    \end{align*}
+    Resposta Correta: item D.
+  \fimSol
+  %%%%
+  \item O erro percentual na medição da massa e da velocidade é de 2\% e 3\%, respectivamente. O erro na medição da energia cinética, obtido a partir da medição da massa e da velocidade, será:
+  \begin{enumerate}
+    \item 12\%
+    \item 10\%
+    \item 8\%
+    \item 5\%
+  \end{enumerate}
+  \iniSol
+  \begin{align*}
+    K = \dfrac{1}{2}mv^2 &\Rightarrow dK = \dfrac{1}{2} dm v^2 + \dfrac{1}{2} m (2v dv) \Rightarrow \dfrac{d K}{K} = \dfrac{\dfrac{1}{2} dm v^2 + \dfrac{1}{2} m (2v dv)}{\dfrac{1}{2}m v^2}\\
+    &\Rightarrow \dfrac{dK}{K} = \dfrac{dm}{m} + 2 \dfrac{dv}{v}\\
+    &\Rightarrow \left(\dfrac{\Delta K}{K}\right)_{max} = max \left(\pm \dfrac{\Delta m}{m} \pm 2 \dfrac{\Delta v}{v}\right)\\
+    &\Rightarrow \left(\dfrac{\Delta K}{K}\right)_{max} = \pm \left(\dfrac{\Delta m}{m} + \dfrac{\Delta v}{v}\right) = \pm \left(2\% + 2 \cdot 3\%\right) = \pm 8\%
+  \end{align*}
+  Resposta correta: item C.
+  \fimSol
+  %%%%
+  \item Uma força \( F \) é aplicada em uma placa quadrada de lado \( L \). Se o erro percentual na determinação de \( L \) é de 2\% e o de \( F \) é de 4\%, qual é o erro permitido na pressão?
+  \begin{enumerate}
+    \item 8\% 
+    \item 6\%
+    \item 4\%
+    \item 2\%
+  \end{enumerate}
+  \iniSol
+    \begin{align*}
+      p = \dfrac{F}{A} \Rightarrow p = \dfrac{F}{L^2} & \Rightarrow dp = \dfrac{dF L ^2 - F (2L dL)}{L^2} \Rightarrow \dfrac{dp}{p} = \dfrac{\dfrac{dF L ^2 - F (2L dL)}{L^2}}{\dfrac{F}{L^2}}\\
+      &\Rightarrow \dfrac{dp}{p} = \dfrac{dF}{F} - 2\dfrac{dL}{L}\\
+      &\Rightarrow \left(\dfrac{\Delta p}{p}\right)_{max} =  max \left(\pm \dfrac{\Delta F}{F} \mp 2 \dfrac{\Delta L}{L}\right)\\
+       &\Rightarrow \left(\dfrac{\Delta p}{p}\right)_{max} = \pm \left(\dfrac{\Delta F}{F} + 2 \dfrac{\Delta L}{L}\right) = \pm (4\% + 2 \cdot 2\%) = \pm 8\%
+    \end{align*}
+    Resposta Correta: item A.
+  \fimSol
+  %%%%
 \end{enumerate}
 
 
