@@ -27,7 +27,7 @@
 
 
 % Definir leftmargin=* para todos os ambientes enumerate
-\setlist[enumerate,1]{leftmargin=*, resume, label=\textbf{\arabic*}}
+\setlist[enumerate,1]{leftmargin=*, label=\textbf{\arabic*.}}
 
 
 
@@ -131,6 +131,9 @@ $endif$
     $if(booktitle)$
     Solucionário de 
     $booktitle$
+    $if(booksubtitle)$
+    : $booksubtitle$
+    $endif$
     $if(bookauthors)$
     ($bookauthors$)
     $endif$

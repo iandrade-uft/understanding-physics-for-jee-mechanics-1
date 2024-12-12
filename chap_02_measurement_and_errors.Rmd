@@ -25,9 +25,7 @@ use_python("~/.envs/science/bin/python")
 ```
 
 
-\section*{Exercícios}
-
-\subsection*{Questões Objetivas}
+\section*{Questões Objetivas}
 
 \begin{enumerate}
   \item O número de algarismos significativos em 3400 é:
@@ -207,120 +205,118 @@ use_python("~/.envs/science/bin/python")
   
   \fimSol
   %%%%
-  \item
+  \item Uma quantidade física $A$ é dependente de outras quatro quantidades físicas $p$, $q$, $r$ e $s$ por meio da equaçãção $A = \dfrac{\sqrt{pq}}{r^2s^3}$. O erro percentual das medidas de $p$, $q$, $r$ e $s$ são 1\%, 3\%, 0,5\% e 0.33\%, respectivamente, então o erro percentual máximo de $A$ é:
+  \begin{enumerate}
+    \item 2\%
+    \item 0\%
+    \item 4\%
+    \item 3\%
+  \end{enumerate}
+  \iniSol
+  \begin{small}
+  \begin{align*}
+    A = \dfrac{\sqrt{pq}}{r^2s^3} & \Rightarrow A = p^{1/2}q^{1/2} r^{-2}s^{-3} \Rightarrow dA = d(p^{1/2}) q^{1/2} r^{-2}s^{-3} + p^{1/2}d(q^{1/2} r^{-2}s^{-3})\\
+    &\Rightarrow dA = \left(\dfrac{1}{2}p^{-1/2}dp\right)q^{1/2} r^{-2}s^{-3} + p^{1/2} \left[d(q^{1/2})r^{-2}s^{-3} + q^{1/2}d(r^{-2}s^{-3})\right]\\
+    &\Rightarrow dA = \dfrac{1}{2}p^{-1/2}q^{1/2}r^{-2}s^{-3}dp + p^{1/2} \left\lbrace\left(\dfrac{1}{2}q^{-1/2}dq\right)r^{-2}s^{-3} + q^{1/2} \left[\left(-2r^{-3} dr\right) s^{-2} + r^{-2} \left(-3s^{-4}ds\right) \right]\right\rbrace\\
+    &\Rightarrow dA = \dfrac{1}{2}p^{-1/2}q^{1/2}r^{-2}s^{-3} dp + \dfrac{1}{2}p^{1/2}q^{-1/2}r^{-2}s^{-3}dq - 2p^{1/2}q^{-2}r^{-3}s^{-3}dr - 3p^{1/2}q^{1/2}r^{-2}s^{-4}ds\\
+    &\Rightarrow \dfrac{dA}{A} = \dfrac{1}{2} \dfrac{p^{-1/2}q^{1/2}r^{-2}s^{-3} dp}{p^{1/2}q^{1/2} r^{-2}s^{-3}} + \dfrac{1}{2} \dfrac{p^{1/2}q^{-1/2}r^{-2}s^{-3}dq}{p^{1/2}q^{1/2} r^{-2}s^{-3}} - 2 \dfrac{p^{1/2}q^{-2}r^{-3}s^{-3}dr}{p^{1/2}q^{1/2} r^{-2}s^{-3}} - 3 \dfrac{p^{1/2}q^{1/2}r^{-2}s^{-4}ds}{p^{1/2}q^{1/2} r^{-2}s^{-3}}\\
+    &\Rightarrow \dfrac{dA}{A} = \dfrac{1}{2}\dfrac{dp}{p} + \dfrac{1}{2}\dfrac{dq}{q} - 2\dfrac{dr}{r} - 3 \dfrac{ds}{s}\\
+    &\Rightarrow \dfrac{\Delta A}{A} = \dfrac{1}{2}\left(\pm \dfrac{\Delta p}{p}\right) + \dfrac{1}{2}\left(\pm \dfrac{\Delta q}{q}\right) - 2 \left(\pm \dfrac{\Delta r}{r}\right) - 3 \left(\pm \dfrac{\Delta s}{s}\right)\\
+    & \Rightarrow \left(\dfrac{\Delta A}{A}\right)_{max} = max \left[\dfrac{1}{2}\left(\pm \dfrac{\Delta p}{p}\right) + \dfrac{1}{2}\left(\pm \dfrac{\Delta q}{q}\right) - 2 \left(\pm \dfrac{\Delta r}{r}\right) - 3 \left(\pm \dfrac{\Delta s}{s}\right)\right]\\
+    &\Rightarrow \left(\dfrac{\Delta A}{A}\right)_{max} = \dfrac{1}{2}\dfrac{\Delta p}{p} + \dfrac{1}{2}\dfrac{\Delta q}{q} + 2 \dfrac{\Delta r}{r} + 3 \dfrac{\Delta s}{s}\\
+    &\Rightarrow \left(\dfrac{\Delta A}{A}\right)_{max} = \dfrac{1}{2} \cdot 1\% + \dfrac{1}{2} \cdot 3\% + 2 \cdot 0,5\% + 3 \cdot 0,33\%\\
+    &\Rightarrow \left(\dfrac{\Delta A}{A}\right)_{max} \approx 4\%
+  \end{align*}
+  \end{small}
+  Resposta Correta: item C.
+  \fimSol
+  %%%%
+  \item O comprimento de um pêndulo simples é de aproximadamente 100 cm, com uma precisão conhecida de 1 mm. Seu período de oscilação é de 2 s, determinado ao medir o tempo de 100 oscilações utilizando um relógio com resolução de 0,1 s. Qual é a precisão no valor determinado de $g$?
+  \begin{enumerate}
+    \item 0,2\%
+    \item 0,1\%
+    \item 0,5\%
+    \item 2\%
+  \end{enumerate}
+  \iniSol
+  O período de oscilação $T$ de um pêndulo simples de comprimento $L$ é dado por:
+  $$
+  T = 2\pi \sqrt{\dfrac{g}{L}}
+  $$
+  em que $g$ é a aceleração da gravidade.
+  
+  Isolando $g$, obtemos
+  $$
+  g = \dfrac{1}{4\pi^2}T^2 L
+  $$
+  Se $T$ foi medido como a média de $n = 100$ oscilações cuja duração total foi igual a $t$, temos:
+  $$
+  g = \dfrac{1}{4\pi^2} \left(\dfrac{t}{n}\right)^2L \Rightarrow  g = \dfrac{1}{4\pi n^2} t^2 L
+  $$
+  
+  Tomanto a diferencial da expressão acima, obtemos:
+  \begin{align*}
+    dg = \dfrac{1}{4\pi n^2} \left(2t dt L + t^2 dL\right) &\Rightarrow \dfrac{dg}{g} = 2\dfrac{dt}{t} + \dfrac{dL}{L}\\
+    &\Rightarrow \left(\dfrac{\Delta g}{g}\right)_{max} = 2\dfrac{\Delta t}{t} + \dfrac{\Delta L}{L}\\
+    &\Rightarrow \left(\dfrac{\Delta g}{g}\right)_{max} = 2 \cdot \dfrac{0,1}{200} + \dfrac{1}{1000} = 0,002 = 0,2\%
+  \end{align*}
+  \fimSol
+  %%%%
+  \item A massa de uma bola é 1,76 kg, A massa destas bolas é:
+  \begin{enumerate}
+    \item $0,44\times 10^{3}$ kg
+    \item $44,0$ kg
+    \item $44$ kg
+    \item $44,00$ kg
+  \end{enumerate}
+  \iniSol
+    \begin{align*}
+      M = 25 \times 1,76 = 44,0\text{kg}
+    \end{align*}
+    Resposta Correta: item B.
+  \fimSol
+  %%%%
+  \item A menor divisão de um cronômetro é de 0,2 s. O tempo de 20 oscilações de um pêndulo foi medido como 25 s. O erro percentual no período é:
+  \begin{enumerate}
+    \item 1,2\%
+    \item 0,8\%
+    \item 1,8\%
+    \item Nenhuma das anteriores.
+  \end{enumerate}
+  \iniSol
+    Seja $T$ o período de oscilação, medido por meio  da média de $n$ oscilações com duração total igual a $t$. Assim, 
+    \begin{align*}
+      T = \dfrac{t}{n} &\Rightarrow dT = \dfrac{dt}{n} \Rightarrow \dfrac{dT}{T} = \dfrac{\dfrac{dt}{n}}{\dfrac{t}{n}} \Rightarrow \dfrac{dT}{T} = \dfrac{dt}{t}\\
+      &\Rightarrow \dfrac{\Delta T}{T} = \dfrac{\Delta t}{t}\\
+      &\Rightarrow \dfrac{\Delta T}{T} = = \dfrac{0,2}{25} 8 \times 10^{-3} = 0,8\%
+    \end{align*}
+    Resposta Correta: item B.
+  \fimSol
+  %%%%
 \end{enumerate}
 
 
 
+\newpage
+\section*{Questões Subjetivas}
 
 \begin{enumerate}
-  \item \textbf{(FEI-SP)} Dois móveis $A$ e $B$, ambos com movimento uniforme, percorrem uma trajetória retilínea conforme mostra a figura. Em $t = 0$, estes se encontram, respectivamente, nos pontos $A$ e $B$ na trajetória. As velocidades dos móveis são $v_A = 50$ m/s e $v_B = 30$ m/s no mesmo sentido.
-  
-  \begin{figure}[H]
-    \centering
-    \begin{tikzpicture}
-      \draw[-latex] (-0.5, 0) -- (8, 0);
-      \foreach \i/\x/\y/\cor in {0/0/2/black, A/2/1.5/red, B/6/2/red}{
-        \draw[dashed] (\x, 0) -- (\x, \y);
-        \draw[\cor, thick] (\x, 0.1) -- (\x, -0.1) node[below, black] {$\i$};
-      }
-      \foreach \i/\x/\y in {50/2/1.5, 150/6/2}{
-        \draw[latex-latex] (0, \y) -- (\x, \y) node[midway, above] {$\i$ m};
-      }
-    \end{tikzpicture}
-  \end{figure}
-  
-  Em que instante a distância entre os dois móveis será 50 m?
-  \begin{enumerate}[label=(\alph*)]
-    \foreach \resp in {200, 225, 250, 300, 350} {
-      \item $\resp$ m
-    }
+  \item Escreva o número de algarismos significativos das seguintes quantidades:
+  \begin{enumerate}
+    \item $6428$
+    \iniSol
+      $$
+      6428 = 6,428 \times 10^{3} \Rightarrow 4 \text{ algarismos significativos}
+      $$
+    \fimSol
+    \item $62,00$ m
+    
+    \item $0,00628$ cm
+    
+    \item $1200$ N 
   \end{enumerate}
-  
-  \iniSol
-  
-
-
-  
-  Escrevamos as equações horárias das trajétórias dos móveis $A$ e $B$, sabendo que ambos descrevem movimento uniforme:
-  
-  \begin{align*}
-    \begin{cases}
-      s_A = s_{0A} + v_A t\\
-      s_B = s_{0B} + v_B t\\
-    \end{cases}
-  \end{align*}
-  
-  Os móveis encontram-se no instante $t^{*}$ tal que $s_A = s_B = s^{*}$, ou seja:
-  \begin{align*}
-    s_A = s_B &\Rightarrow s_{0A} + v_A t^{*} = s_{0B} + v_B t^{*}\\
-    &\Rightarrow v_A t^{*} - v_B t^{*} = s_{0B} - s_{0A}\\
-    &\Rightarrow (v_A  - v_B) t^{*} = s_{0B} - s_{0A}\\
-    &\Rightarrow t^{*} = \dfrac{s_{0B} - s_{0A}}{v_A  - v_B}
-  \end{align*}
-  
-  Nesse instante, a posição $s^{*}$ dos móveis será:
-  
-  \begin{align*}
-    s^{*} = s_{0A} + v_A t^{*} \Rightarrow s^{*} = s_{0A} + v_A \left( \dfrac{s_{0B} - s_{0A}}{v_A  - v_B} \right)
-  \end{align*}
-  
-  
-  O script \verb|Python| abaixo mostra o resultano numérico correspondente ao desenvolvimento algébrico acima:
 \end{enumerate}
 
-```{python}
-# Dados do problema
-s_0A = 50
-v_A = 50
-s_0B = 150
-v_B = 30
-
-# Instante do encontro
-t_star = (s_0B - s_0A) / (v_A - v_B)
-
-# Posição do encontro
-s_star = s_0A + v_A * t_star
-```
-
-
-  Os móveis encontram-se no instante $t^{*} = `r format(py$t_star, decimal.mark=",")`$ s e na posição $s^{*} = `r format(py$s_star, decimal.mark=",")`$ m.
-  
-
-  O gráfico abaixo mostra a posição de cada móvel em função do tempo, bem como o ponto de encontro.
-  
-```{python, include=FALSE}
-import numpy as np
-t = np.array([0, t_star, 1.5*t_star])
-s_A = s_0A + v_A * t
-s_B = s_0B + v_B * t
-
-t_lim = [np.min(t)-t_star/3, np.max(t)+t_star/2]
-s_lim = [-s_0A, np.max([np.max(s_A), np.max(s_B)]) + s_0A]
-```
-
-\begin{figure}[H]
-  \centering
-  \begin{tikzpicture}[x=0.5cm, y=0.01cm]
-    % Eixo X
-    \draw[-latex] (`r py$t_lim[1]`, 0) -- (`r py$t_lim[2]`, 0) node[below] {$t$ (s)};
-    % Eixo Y
-    \draw[-latex] (0, `r py$s_lim[1]`) -- (0, `r py$s_lim[2]`) node[left] {$s$ (m)};
-    % Função Horária de A
-    \draw[red, thick] (`r py$t[1]`, `r py$s_A[1]`) -- (`r py$t[3]`, `r py$s_A[3]`) node[right, yshift=5pt, black] {$\textbf{A}$};
-    \draw[thick] (4pt, `r py$s_0A`) -- (-4pt, `r py$s_0A`) node[left] {$`r py$s_0A`$};
-    % Função Horária de B
-    \draw[blue, thick] (`r py$t[1]`, `r py$s_B[1]`) -- (`r py$t[3]`, `r py$s_B[3]`) node[right, yshift=-2pt , black] {$\textbf{B}$};
-    \draw[thick] (4pt, `r py$s_0B`) -- (-4pt, `r py$s_0B`) node[left] {$`r py$s_0B`$};
-    % Ponto de encontro
-    \draw[dashed] (`r py$t_star`, 0) -- (`r py$t_star`, `r py$s_star`) -- (0, `r py$s_star`);
-    \draw[thick] (`r py$t_star`, 4pt) -- (`r py$t_star`, -4pt) node[below] {$t^{*} = `r py$t_star`$};
-    \draw[thick] (4pt, `r py$s_star`) -- (-4pt, `r py$s_star`) node[left] {$`r py$s_star`$};
-  \end{tikzpicture}
-\end{figure}
 
 
 
-Portanto, a resposta correta é letra \textbf{D}.
-
-\fimSol
