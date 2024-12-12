@@ -457,11 +457,100 @@ use_python("~/.envs/science/bin/python")
   \iniSol
     Para realizar a operação de subtração (adição) com notação científica, o expoente da base deve ser o mesmo em todas as parcelas da operação, ou seja,
     \begin{align*}
-    R = 4,0 \times 10^{-4} - 2,5 times 10^{-6} &= 4,0 \times 10^{-4} - 0,025 \times 10^{-4}\\
+    R = 4,0 \times 10^{-4} - 2,5 \times 10^{-6} &= 4,0 \times 10^{-4} - 0,025 \times 10^{-4}\\
     &= 3,975 \times 10^{-4}\\ 
     &= 4,0 \times 10^{-4}
     \end{align*}
     Note-se que o resultado foi arredondado para apresentar apenas um dógito após a vírgula pois esta é  menor quantidade de dígitos após a vírgula nas parcelas.
+  \fimSol
+  %%%%
+  \item A massa de uma caixa medida por uma balança de mercearia é de 2,300 kg. Duas peças de ouro com massas de 20,15 g e 20,17 g são adicionadas à caixa. Qual é (a) a massa total da caixa, (b) a diferença entre as massas das peças, considerando os algarismos significativos corretos?\\
+  \iniSol
+    Considerando os algarismos significativos corretos, a massa do conjunto deve ser representada com a menor quantidade de dígitos após a vírgula, ou seja,
+    $$
+    M = 2,300 \;\text{kg} + 20,15 \;\text{g} + 20,17 \;\text{g} = 2,3 \;\text{kg} + 0,02015 \; \text{kg} + 0,02017 \; \text{kg} = 2,34032 \;\text{kg} = 2,3 \;\text{kg}
+    $$
+    
+    A diferença entre as massas das peças de ouro é:
+    $$
+    \Delta m = 20,17 \; \text{g} - 20,15 \; \text{g} = 0,02 \; \text{g}
+    $$
+  \fimSol
+  %%%%
+  \item Um fio fino tem comprimento de 21,7 cm e raio de 0,46 mm. Calcule o volume do fio considerando os algarismos significativos corretos.\\
+  \iniSol
+  \begin{align*}
+    V = \pi R^2 l &= \pi (0,46\;\text{mm})^2 \times (21,7\;\text{cm}) = \pi (0,046\;\text{cm})^2 \times (21,7\;\text{cm})\\
+    &= 0,144253 \; \text{cm}^3\\
+    &= 0,14 \; \text{cm}^3
+  \end{align*}
+  O resultado final foi apresentado com dois algarismos significativos pois esta é a menor quantidade de algarismos significativos nas parcelas da expressão para o volume.
+  \fimSol
+  %%%%
+  \item Um cubo tem lado de comprimento $2,342$ m. Encontre o volume e a área superficial com a correta quantidade de algarismos significativos.\\
+  \iniSol
+    \begin{align*}
+      &V = l^3 = (2,342\;\text{m})^3 = 12,85 \;\text{m}^3\\
+      &S = l^2 = (2,342 \;\text{m})^2 = 5,485 \; \text{m}^2
+    \end{align*}
+  \fimSol
+  %%%%
+  \item Encontre a densidade quando uma massa de 9,23 kg ocupa um volume de 1,1 m$^3$. Considere os algarismos significativos.\\
+  \iniSol
+  \begin{align*}
+    \rho = \dfrac{m}{V} &= \dfrac{9,23\;\text{kg}}{1,1\;\text{m}^3} = 8,4\;\text{kg/m}^3
+  \end{align*}
+  \fimSol
+  %%%%
+  \item O comprimento, a largura e a espessura de uma lâmina retangular são 4,234 m, 1,005 m e 2,01 m, respectivamente. Encontre o volume da lâmina considerando os algarismos significativos corretos.\\
+  \iniSol
+  \begin{align*}
+    \begin{cases}
+      l = 4,234\;\text{m}\\
+      b = 1,005\;\text{m}\\
+      t = 2,01\;\text{m}\\
+    \end{cases}
+    &\Rightarrow V = l \times b \times t \Rightarrow V = (4,234\;\text{m}) \times (1,005\;\text{m}) \times (2,01\;\text{m}) \\
+    &\Rightarrow V = 8,55\;\text{m}^3
+  \end{align*}
+  \fimSol
+  %%%%
+  \item O raio de uma esfera é medido como $(2,1 \pm 0,5)$ cm. Calcule sua área de superfície com os limites de erro.\\
+  \iniSol
+    A área superficial $S$ de uma esfera de raio $R$ é
+    $$
+    S = 4\pi R^2 = 4 \pi (2,1)^2 = 55\;\text{cm}^2
+    $$
+    Tomando a diferencial total de $S$, temos:
+    \begin{align*}
+      dS = 4\pi (2RdR) &\Rightarrow \dfrac{dS}{S} = \dfrac{4\pi(2RdR)}{4\pi R^2} \Rightarrow \dfrac{dS}{S} = 2\dfrac{dR}{R}\\
+      &\Rightarrow \dfrac{\Delta S}{S} = 2\dfrac{\Delta R}{R} \\
+      & \Rightarrow \Delta S = 2 S \dfrac{\Delta R}{R}\\
+      &\Rightarrow \Delta S = 2 (55) \dfrac{0,5}{2,1} = 26
+    \end{align*}
+    Portanto, considerando o limite de erro, temos
+    $$
+    S = (55 \pm 26) \;\text{cm}^2
+    $$
+  \fimSol
+  %%%%
+  \item A temperatura de dois corpos medida por um termômetro é $(20 \pm 0,5)$°C e $(50 \pm 0,5)$°C. Calcule a diferença de temperatura com os limites de erro.\\
+  \iniSol
+    \begin{align*}
+      \Delta \theta = (50 - 20) + max\left[\pm 0,5 - (\pm 0,5)\right] = 30 \pm (0,5+0,5) = (30 \pm 1)^{\circ}\text{C}
+    \end{align*}
+  \fimSol
+  %%%%
+  \item A resistência $R = \dfrac{V}{I}$, onde $V = (100 \pm 5,0)$ V e $I = (10 \pm 0,2)$ A. Encontre o erro percentual em $R$\\
+  \iniSol
+    Tomando o diferencial total de $R = \dfrac{V}{I}$, temos,
+    \begin{align*}
+      dR = \dfrac{I dV - V dI}{I^2} &\Rightarrow \dfrac{dR}{R} = \dfrac{(I dV - V dI)}{I^2} \dfrac{I}{V} \Rightarrow \dfrac{dR}{R} = \dfrac{dV}{V} - \dfrac{dI}{I}\\
+      &\Rightarrow \dfrac{\Delta R}{R} = \pm \dfrac{\Delta V}{V} - \left(\pm \dfrac{\Delta I}{I}\right) \Rightarrow \dfrac{\Delta R}{R} = \pm \dfrac{\Delta V}{V} \mp \dfrac{\Delta I}{I}\\
+      &\Rightarrow \left(\dfrac{\Delta R}{R}\right)_{max} = max \left(\pm \dfrac{\Delta V}{V} \mp \dfrac{\Delta I}{I}\right)\\
+      &\Rightarrow \left(\dfrac{\Delta R}{R}\right)_{max} = \dfrac{\Delta V}{V} + \dfrac{\Delta I}{I}\\
+      &\Rightarrow \left(\dfrac{\Delta R}{R}\right)_{max} = \dfrac{5}{100} + \dfrac{0,2}{10} = 0,07 = 7\%
+    \end{align*}
   \fimSol
 \end{enumerate}
 
