@@ -303,17 +303,57 @@ use_python("~/.envs/science/bin/python")
 \begin{enumerate}
   \item Escreva o número de algarismos significativos das seguintes quantidades:
   \begin{enumerate}
-    \item $6428$
+    \item $6428$\\
     \iniSol
       $$
       6428 = 6,428 \times 10^{3} \Rightarrow 4 \text{ algarismos significativos}
       $$
     \fimSol
-    \item $62,00$ m
-    
-    \item $0,00628$ cm
-    
-    \item $1200$ N 
+    \item $62,00$ m\\
+    \iniSol
+    $$
+    62,00 \text{ m} = 6,200 \times 10^{3} \text{ m} \Rightarrow 4 \text{ algarismos significativos}
+    $$
+    \fimSol
+    \item $0,00628$ cm\\
+    \iniSol
+    $$
+    0,00628 \text{ cm} = 6,28 \times 10^{-3} \text{ cm} \Rightarrow 3 \text{ algarismos significativos}
+    $$
+    \fimSol
+    \item $1200$ N \\
+    \iniSol
+    $$
+    1200 \text{ N} = 1,2 \times 10^{2} \text{ N} \Rightarrow 2 \text{ algarismos significativos}
+    $$
+    \fimSol
+  \end{enumerate}
+  \item Escreva o número de dígitos significativos nas seguintes quantidades:
+  \begin{enumerate}
+    \item $1001$\\
+    \iniSol
+    $$
+    1001 = 1,001 \times 10^{3} \Rightarrow 4 \text{ Dígitos Significativos}
+    $$
+    \fimSol
+    \item $100,1$\\
+    \iniSol
+    $$
+    100,1 = 1,001 \times 10^{2} \Rightarrow 4 \text{ Dígitos Significativos}
+    $$
+    \fimSol
+    \item $100,10$\\
+    \iniSol
+    $$
+    100,10 = 1,0010 \times 10^{2} \Rightarrow 5 \text{ Dígitos Significativos}
+    $$
+    \fimSol
+    \item $0,001001$\\
+    \iniSol
+    $$
+    0,001001 = 1,001 \times 10^{-3} \Rightarrow 4 \text{ Dígitos Significativos}
+    $$
+    \fimSol
   \end{enumerate}
 \end{enumerate}
 
