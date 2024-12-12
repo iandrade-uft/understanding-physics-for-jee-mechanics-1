@@ -552,6 +552,19 @@ use_python("~/.envs/science/bin/python")
       &\Rightarrow \left(\dfrac{\Delta R}{R}\right)_{max} = \dfrac{5}{100} + \dfrac{0,2}{10} = 0,07 = 7\%
     \end{align*}
   \fimSol
+  %%%%
+  \item Determine o erro percentual na resistência específica dada por $\rho = \dfrac{\pi r^2 R}{l}$ onde $r$ é o raio medindo $(0,2 \pm 0,02)$ cm, $R$ é a resistência de $(60 \pm 2)$ ohm  e $l$ é o comprimento de $(150 \pm 0,1)$ cm.\\
+  \iniSol
+  \begin{align*}
+    \rho =  \dfrac{\pi r^2 R}{l} \Rightarrow \pi r^2 R l^{-1} &\Rightarrow d\rho = \pi d(r^2) R l^{-1} + \pi r^2 d(R l^{-1})\\
+    &\Rightarrow d\rho = \pi (2r dr) R l^{-1} + \pi r^{2} \left[dR l^{-1} + R (-l^{-2} dl)\right]\\
+    &\Rightarrow d\rho = 2\pi rRl^{-1} dr + \pi r^2 l^{-1} dR  - \pi r^2 R l^{-2} dl\\
+    &\Rightarrow \dfrac{d\rho}{\rho} = \dfrac{2\pi rRl^{-1} dr + \pi r^2 l^{-1} dR  - \pi r^2 R l^{-2} dl}{\pi r^2 R l^{-1}}\\
+    &\Rightarrow \dfrac{d\rho}{\rho} = 2\dfrac{dr}{r} + \dfrac{dR}{R} - \dfrac{dl}{l}\\
+    &\Rightarrow \left(\dfrac{\Delta \rho}{\rho}\right)_{max} = 2\dfrac{\Delta r}{r} + \dfrac{\Delta R}{R} + \dfrac{\Delta l}{l}\\
+    &\Rightarrow \left(\dfrac{\Delta \rho}{\rho}\right)_{max} = 2 \dfrac{0,02}{0,2} + \dfrac{2}{60} + \dfrac{0,1}{150} = 0,234 = 23,4\%
+  \end{align*}
+  \fimSol
 \end{enumerate}
 
 
