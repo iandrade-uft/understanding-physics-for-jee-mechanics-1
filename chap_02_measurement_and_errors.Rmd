@@ -355,6 +355,114 @@ use_python("~/.envs/science/bin/python")
     $$
     \fimSol
   \end{enumerate}
+  \item Indique o número de algarismos significativos nas seguintes quantidades:
+  \begin{enumerate}
+    \item $0,007\text{ m}^2$\\
+    \iniSol
+    $$0,007\;\text{m}^2 = 7 \times 10^{-3} \;\text{m}^2 \Rightarrow 1 \;\text{Algarismo Significativo}$$
+    \fimSol
+    \item $2,64 \times 10^{24}\text{ kg}$\\
+    \iniSol
+    $$2,64 \times 10^{24}\;\text{kg}  \Rightarrow 3 \;\text{Algarismos Significativos}$$
+    \fimSol
+    \item $0,2370\;\text{g/cm}^{3}$\\
+    \iniSol
+    $$0,2370\;\text{g/cm}^{3} = 2,370 \times 10^{-1}\;\text{g/cm}^{3}  \Rightarrow 4 \;\text{Algarismos Significativos}$$
+    \fimSol
+  \end{enumerate}
+  \item Arredonde os seguintes números para 2 dígitos significativos:
+  \begin{enumerate}
+    \item $3472$\\
+    \iniSol
+    $$
+      3472 = 3,472 \times 10^{3} \approx 3,5 \times 10^{3} = 3500
+    $$
+    \fimSol
+    \item $84,16$\\
+    \iniSol
+    $$
+    84,16 = 8,416 \times 10^{1} \approx 8,4 \times 10^{1} = 84
+    $$
+    \fimSol
+    \item $2,55$\\
+    \iniSol
+    $$
+      2,55 \approx 2,6 
+    $$
+    \fimSol
+    \item $28,5$\\
+    \iniSol
+    $$
+    28,5 = 2,85 \times 10^{1} \approx 2,8 \times 10^{1} = 28
+    $$
+    \fimSol
+  \end{enumerate}
+  \item Realize as seguintes operações:
+  \begin{enumerate}
+    \item $703 + 7 + 0,66$\\
+    \iniSol
+    $$
+      R = 703 + 7 + 0,66 = 710,66
+    $$
+    Das três parcelas na operação de soma acima, o menor número de algarismos sigificativos após a vírgula é zero. Assim, o resultado deve ser arredondado para zero dígitos após a vírgula, ou seja, $R = 711$.
+    \fimSol
+    \item $2,21 \times 0,3$
+    $$
+      R = 2,21 \times 0,3 = 0,663
+    $$
+    O menor número de dígitos significativos nos fatores é igual a 1 (um). Assim, o resultado também deve ter apenas um dígito significativo, ou seja, $R = 0,7$.
+    \item $12,4 \times 84$\\
+    \iniSol
+    $$
+    R = 12,4 \times 84 = 1041,6 = 1,0416 \times 10^{3}
+    $$
+    O menor número de dígitos significativos nos fatores é igual a 2. Assim, o resultado também deve ter dois dígitos significativos, ou seja, 
+    $$
+    R = 1,0 \times 10^3 = 1000
+    $$
+    \fimSol
+  \end{enumerate}
+  \item Adicione $6,75 \times 10^3$ cm a $4,52 \times 10^2$ cm respeitanto a correta quantidade de algarismos significativos.\\
+  \iniSol
+  \begin{align*}
+    R = 6,75 \times 10^3 + 4,52 \times 10^2 &= 6,75 \times 10^3 + 0,452 \times 10^3\\
+    &= (6,75 + 0,452) \times 10^3 = 7,202 \times 10^{3}\\
+    &= 7,20 \times 10^3 = 7200
+  \end{align*}
+  No resultado acima, a mantissa da notação científica deve apresentar uma quantidade de dígitos após a vírgula igual à parcela com menor quantidade de dígitos após a vírgula.
+  \fimSol
+  \item Calcule $\dfrac{25,2 \times 1374}{33,3}$. Todos os dígitos nesta expressão são significativos.\\
+  \iniSol
+  Dos termos na expressão dada, temos:
+  \begin{table}[H]
+    \centering
+    \begin{tabular}{r c c}
+      \hline
+      Número & Qtd. Algarismos Significativos & Menor\\ \hline
+      25,2 & 3 & *\\
+      1374\; & 4 & \\
+      33,3 & 3 & *\\
+      \hline
+    \end{tabular}
+    A menor quantidade de algarismos significativos é 3. Assim, o resultado deve ser arredondado para três algarismos significativos:
+  \end{table}
+  \begin{align*}
+    R = \dfrac{25,2 \times 1374}{33,3} = 1039,78378 = 1,03978378 \times 10^{3} = 1,040 \times 10^3
+  \end{align*}
+  \fimSol
+  \item Resolva com a devida atenção aos algarismos significativos.
+  $$
+  (4,0 \times 10^{-4} - 2,5 \times 10^{-6})
+  $$
+  \iniSol
+    Para realizar a operação de subtração (adição) com notação científica, o expoente da base deve ser o mesmo em todas as parcelas da operação, ou seja,
+    \begin{align*}
+    R = 4,0 \times 10^{-4} - 2,5 times 10^{-6} &= 4,0 \times 10^{-4} - 0,025 \times 10^{-4}\\
+    &= 3,975 \times 10^{-4}\\ 
+    &= 4,0 \times 10^{-4}
+    \end{align*}
+    Note-se que o resultado foi arredondado para apresentar apenas um dógito após a vírgula pois esta é  menor quantidade de dígitos após a vírgula nas parcelas.
+  \fimSol
 \end{enumerate}
 
 
