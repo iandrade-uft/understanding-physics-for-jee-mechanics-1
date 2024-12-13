@@ -130,7 +130,7 @@ use_python("~/.envs/science/bin/python")
     K = \dfrac{1}{2}mv^2 &\Rightarrow dK = \dfrac{1}{2} dm v^2 + \dfrac{1}{2} m (2v dv) \Rightarrow \dfrac{d K}{K} = \dfrac{\dfrac{1}{2} dm v^2 + \dfrac{1}{2} m (2v dv)}{\dfrac{1}{2}m v^2}\\
     &\Rightarrow \dfrac{dK}{K} = \dfrac{dm}{m} + 2 \dfrac{dv}{v}\\
     &\Rightarrow \left(\dfrac{\Delta K}{K}\right)_{max} = max \left(\pm \dfrac{\Delta m}{m} \pm 2 \dfrac{\Delta v}{v}\right)\\
-    &\Rightarrow \left(\dfrac{\Delta K}{K}\right)_{max} = \dfrac{\Delta m}{m} + \dfrac{\Delta v}{v} = 2\% + 2 \cdot 3\% = 8\%
+    &\Rightarrow \left(\dfrac{\Delta K}{K}\right)_{max} = \dfrac{\Delta m}{m} + 2\dfrac{\Delta v}{v} = 2\% + 2 \cdot 3\% = 8\%
   \end{align*}
   Resposta correta: item C.
   \fimSol
@@ -241,25 +241,20 @@ use_python("~/.envs/science/bin/python")
   \iniSol
   O período de oscilação $T$ de um pêndulo simples de comprimento $L$ é dado por:
   $$
-  T = 2\pi \sqrt{\dfrac{g}{L}}
+  T = 2\pi \sqrt{\dfrac{L}{g}}
   $$
   em que $g$ é a aceleração da gravidade.
   
-  Isolando $g$, obtemos
-  $$
-  g = \dfrac{1}{4\pi^2}T^2 L
-  $$
-  Se $T$ foi medido como a média de $n = 100$ oscilações cuja duração total foi igual a $t$, temos:
-  $$
-  g = \dfrac{1}{4\pi^2} \left(\dfrac{t}{n}\right)^2L \Rightarrow  g = \dfrac{1}{4\pi n^2} t^2 L
-  $$
-  
-  Tomanto a diferencial da expressão acima, obtemos:
+  Isolando $g$ e calculando o diferencial $dg$, temos:
   \begin{align*}
-    dg = \dfrac{1}{4\pi n^2} \left(2t dt L + t^2 dL\right) &\Rightarrow \dfrac{dg}{g} = 2\dfrac{dt}{t} + \dfrac{dL}{L}\\
-    &\Rightarrow \left(\dfrac{\Delta g}{g}\right)_{max} = 2\dfrac{\Delta t}{t} + \dfrac{\Delta L}{L}\\
-    &\Rightarrow \left(\dfrac{\Delta g}{g}\right)_{max} = 2 \cdot \dfrac{0,1}{200} + \dfrac{1}{1000} = 0,002 = 0,2\%
-  \end{align*}
+     T = 2\pi \sqrt{\dfrac{L}{g}} \Rightarrow g = 4\pi^2 L T^{-2} &\Rightarrow dg = 4 \pi^2 \left(T^{-2} dL -2L T^{-3}\right)\\
+     &\Rightarrow \dfrac{dg}{g} = \dfrac{dL}{L} - 2\dfrac{dT}{T}\\
+     &\Rightarrow \dfrac{\Delta g}{g} = \pm \dfrac{\Delta L}{L} \mp 2\dfrac{\Delta T}{T}\\
+     &\Rightarrow \left(\dfrac{\Delta g}{g}\right)_{max} = \dfrac{\Delta L}{L} + 2 \dfrac{\Delta T}{T}\\
+     &\Rightarrow \left(\dfrac{\Delta g}{g}\right)_{max} = \dfrac{0,1\;\text{cm}}{100\;\text{cm}} + 2 \dfrac{0,1\;\text{s}}{2 \cdot 100\;\text{s}}\\
+     &\Rightarrow \left(\dfrac{\Delta g}{g}\right)_{max} = 0,002 = 0,2\%
+    \end{align*}
+    Resposta Correta: item A.
   \fimSol
   %%%%
   \item A massa de uma bola é 1,76 kg, A massa destas bolas é:
@@ -564,6 +559,39 @@ use_python("~/.envs/science/bin/python")
     &\Rightarrow \left(\dfrac{\Delta \rho}{\rho}\right)_{max} = 2\dfrac{\Delta r}{r} + \dfrac{\Delta R}{R} + \dfrac{\Delta l}{l}\\
     &\Rightarrow \left(\dfrac{\Delta \rho}{\rho}\right)_{max} = 2 \dfrac{0,02}{0,2} + \dfrac{2}{60} + \dfrac{0,1}{150} = 0,234 = 23,4\%
   \end{align*}
+  \fimSol
+  %%%%
+  \item Uma quantidade física $\rho$ está relacionada a quatro variáveis $\alpha$, $\beta$, $\gamma$ e $\eta$ por meio da expressão
+  $$
+  \rho = \dfrac{\alpha^3 \beta^2}{\eta \sqrt{\gamma}}.
+  $$
+  Os erros percentuais nas medidas de $\alpha$, $\beta$, $\gamma$ e $\eta$ são 1\%. 3\%, 4\% e 2\%, respectivamente. Determine o erro percentual em $\rho$.\\
+  \iniSol
+    Tomando o diferencial total de $\rho$, temos:
+    \begin{small}
+    \begin{align*}
+      \rho = \dfrac{\alpha^3 \beta^2}{\eta \sqrt{\gamma}} &\Rightarrow \rho = \alpha^3 \beta^2 \gamma^{-1/2} \eta^{-1}\\
+      &\Rightarrow d\rho = d(\alpha^3 \beta^2) \gamma^{-1/2} \eta^{-1} + \alpha^3 \beta^2 d(\gamma^{-1/2} \eta^{-1})\\
+      &\Rightarrow d\rho = \left[\left(3\alpha^2 d\alpha\right)\beta^2  + \alpha^3 \left(2\beta d\beta\right) \right]\gamma^{-1/2} \eta^{-1} + \alpha^3 \beta^2 \left[\left(-\dfrac{1}{2}\gamma^{-3/2} d\gamma\right)\eta^{-1} + \gamma^{-1/2} \left(-\eta^{-2} d\eta\right)\right]\\
+      &\Rightarrow \dfrac{d\rho}{\rho} = 3\dfrac{d\alpha}{\alpha} + 2 \dfrac{d\beta}{\beta} - \dfrac{1}{2}\dfrac{d\gamma}{\gamma} - \dfrac{d\eta}{\eta}\\
+      &\Rightarrow \dfrac{\Delta \rho}{\rho} = \pm 3\dfrac{\Delta \alpha}{\alpha} \pm 2\dfrac{\Delta \beta}{\beta} \mp \dfrac{1}{2} \dfrac{\Delta \gamma}{\gamma} - \dfrac{\Delta \eta}{\eta}\\
+      &\Rightarrow \left(\dfrac{\Delta \rho}{\rho}\right)_{max} = max \left(\pm 3\dfrac{\Delta \alpha}{\alpha} \pm 2\dfrac{\Delta \beta}{\beta} \mp \dfrac{1}{2} \dfrac{\Delta \gamma}{\gamma} \mp \dfrac{\Delta \eta}{\eta}\right)\\
+      &\Rightarrow \left(\dfrac{\Delta \rho}{\rho}\right)_{max} = 3\dfrac{\Delta \alpha}{\alpha} + 2\dfrac{\Delta \beta}{\beta} + \dfrac{1}{2} \dfrac{\Delta \gamma}{\gamma} + \dfrac{\Delta \eta}{\eta}\\
+      &\Rightarrow \left(\dfrac{\Delta \rho}{\rho}\right)_{max} = 3 \cdot 1\% + 2 \cdot 3\% + \dfrac{1}{2} \cdot 4\% + 2\% = 13\%
+    \end{align*}
+    \end{small}
+  \fimSol
+  %%%%
+  \item O período de oscilação de um pêndulo simples é dado por \( T = 2\pi \sqrt{\frac{L}{g}} \). O valor medido de \( L \) é \( 20,0 \, \text{cm} \), com uma precisão de \( 1 \, \text{mm} \), e o tempo para 100 oscilações do pêndulo foi encontrado como \( 90 \, \text{s} \), usando um relógio de pulso com resolução de \( 1 \, \text{s} \). Qual é a precisão na determinação de \( g \)?\\
+  \iniSol
+    \begin{align*}
+     T = 2\pi \sqrt{\dfrac{L}{g}} \Rightarrow g = 4\pi^2 L T^{-2} &\Rightarrow dg = 4 \pi^2 \left(T^{-2} dL -2L T^{-3}\right)\\
+     &\Rightarrow \dfrac{dg}{g} = \dfrac{dL}{L} - 2\dfrac{dT}{T}\\
+     &\Rightarrow \dfrac{\Delta g}{g} = \pm \dfrac{\Delta L}{L} \mp 2\dfrac{\Delta T}{T}\\
+     &\Rightarrow \left(\dfrac{\Delta g}{g}\right)_{max} = \dfrac{\Delta L}{L} + 2 \dfrac{\Delta T}{T}\\
+     &\Rightarrow \left(\dfrac{\Delta g}{g}\right)_{max} = \dfrac{0,1\;\text{cm}}{20,0\;\text{cm}} + 2 \dfrac{1\;\text{s}}{90\;\text{s}}\\
+     &\Rightarrow \left(\dfrac{\Delta g}{g}\right)_{max} = 0,027 = 2,7\%
+    \end{align*}
   \fimSol
 \end{enumerate}
 
